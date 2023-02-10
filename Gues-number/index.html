@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="guess.css" />
+    <script src="guess.js" defer></script>
+  </head>
+
+  <body>
+    <fieldset id="box" class="guessBox">
+      <legend>Guess a number · GAME 1~100</legend>
+      <input type="text" placeholder="Input your number" maxlength="3" />
+      <button id="btn">Guess or not</button>
+      <div id="mesBox">
+        <span id="recordNum" class="record">Your guessed:</span>
+        <br />
+        <span id="message" class="message-red"></span>
+        <input type="reset" value="Let's play again!" style="display: none" />
+      </div>
+    </fieldset>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 100%;
+  width: 1200px;
+  height: 500px;
+}
+
+.left,
+.right {
+  position: relative;
+}
+
+.block {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  transition: all 1s cubic-bezier(0, 0.585, 1, 0.09);
+}
+
+.left .block {
+  background-color: aqua;
+  left: 520px;
+}
+.right .block {
+  background-color: orangered;
+  left: 0;
+}

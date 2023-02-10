@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: '微软雅黑';
+  height: 850px;
+}
+
+#box {
+  width: 400px;
+  height: 400px;
+  background: #e5f0e5;
+  border-radius: 25px;
+  box-shadow: 9px 9px 12px #908d89,
+    -9px -9px 12px #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#passBox {
+  border: 2px solid rgba(190, 190, 190, 0.5);
+  width: 135px;
+  height: 12 px;
+  align-self: flex-start;
+  margin-left: 50px;
+  margin-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#passBox .ospan {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  margin: 1px;
+  background-color: #ccc;
+}
+
+#passBox .ospan:first-child {
+  border-radius: 20px 0px 0px 20px;
+}
+
+#passBox .ospan:last-child {
+  border-radius: 0px 20px 20px 0px;
+}
+
+#account,
+#password {
+  width: 300px;
+  height: 30px;
+}
+
+p {
+  width: 300px;
+  height: 42px;
+  margin: 10px 0px 15px 0px;
+  color: rgb(172, 172, 172);
+}
+
+input {
+  border-radius: 10px;
+  border: 1px solid #c0c0c0;
+  outline: 0;
+  font-size: 16px;
+  padding: 2px 0px 2px 6px;
+  transition: .3s;
+}
+
+input:focus {
+  border: 1px solid rgba(131, 220, 247, 0.815);
+  box-shadow: 0px 0px 6px rgba(131, 220, 247, 0.692);
+  transition: .3s;
+}

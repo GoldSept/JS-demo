@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#small {
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  width: 535px;
+  height: 803px;
+  z-index: 99;
+  /* 取消选中 */
+  user-select: none;
+}
+
+#small img {
+  width: 100%;
+  height: 100%;
+}
+
+#big {
+  position: absolute;
+  left: 700px;
+  top: 50px;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  display: none;
+}
+
+#big img {
+  position: absolute;
+  width: 1070px;
+  height: 1606px;
+}
+
+#mark {
+  background-color: #ccc;
+  opacity: .5;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+}

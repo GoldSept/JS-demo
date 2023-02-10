@@ -1,0 +1,35 @@
+#box {
+  width: 700px;
+  height: 40px;
+  border: 1px solid;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+#filler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 40px;
+  background: linear-gradient(
+    89.6deg,
+    rgba(245, 196, 207, 1) 8.06%,
+    rgba(66, 82, 183, 1) 88.95%
+  );
+}
+
+#slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 47, 167, 0.8);
+}
+
+#slide:hover {
+  cursor: pointer;
+}

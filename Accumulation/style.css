@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono";
+}
+
+body {
+  background-color: #000;
+}
+
+#number {
+  position: relative;
+  margin: 200px auto;
+  width: 120px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.scroll-num {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  padding-top: 100px;
+  text-align: center;
+  font-size: 5rem;
+  height: auto;
+  width: 100%;
+  transition: top 0.3s ease-out;
+}
+
+.scroll-num > div {
+  color: #fff;
+  /* 辉光效果 */
+  /* text-shadow: 0 0 20px #fff, 0 0 40px #ca8eff, 0 0 60px #6f00d2; */
+  /* 火焰效果 */
+  text-shadow: 0 0 4px #fff, 0 5px 4px #ff3, 2px 8px 6px #fd3, 2px 7px 11px #f80, 2px 10px 18px #f20;
+  user-select: none;
+  height: 100px;
+}
+
+#btn-add {
+  position: relative;
+  top: 200px;
+  left: 720px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1.7rem;
+  color: #fff;
+  font-style: italic;
+  background: linear-gradient(145deg, #f0f0f0a4, #cacacaa6);
+  box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffffc5;
+  transition: all 0.11s ease-out;
+}
+
+#btn-add:active {
+  transform: scale(0.85);
+}

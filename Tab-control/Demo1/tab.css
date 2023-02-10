@@ -1,0 +1,42 @@
+body {
+  background: #e0e0e0;
+}
+
+div {
+  display: none;
+  width: 360px;
+  height: auto;
+  border-radius: 16px;
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 12px #bcbcbc,
+    inset -6px -6px 12px #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  color: #454545;
+  font-family: "楷体";
+  font-size: 20px;
+}
+
+button {
+  border: none;
+  width: 90px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 12px #bcbcbc,
+    inset -6px -6px 12px #ffffff;
+  transition: .3s ease-in-out;
+  color: #303030;
+}
+
+.active {
+  height: 45px;
+  color: #454545;
+  background: #e0e0e0;
+  box-shadow: -3px -3px 10px #bcbcbc,
+    3px 3px 10px #ffffff;
+  font-size: 18px;
+  transition: .3s ease-in-out;
+}

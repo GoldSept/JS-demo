@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.calculator {
+  padding: 10px;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: space-around;
+  margin: 100px auto;
+  width: 360px;
+  height: 300px;
+  border: 3px solid;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  border-image: linear-gradient(to right, #8f41e9, #578aef) 1;
+  background: radial-gradient(closest-side, rgba(252, 58, 90, 0.432), rgba(225, 252, 130, 0.37), rgba(194, 248, 108, 0.384));
+}
+
+h1 {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  font: normal bolder 30px "";
+  color: transparent;
+  background: linear-gradient(0.25turn, rgba(4, 71, 134, 0.719), rgb(226, 117, 248), rgb(56, 206, 252));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.inp-wrap {
+  position: relative;
+}
+
+label[for="num1"],
+label[for="num2"] {
+  position: absolute;
+  left: 5px;
+  font: normal bolder 9px "JetBrains Mono";
+  flex: 1;
+  z-index: -1;
+  transition: all 0.2s ease-in;
+}
+
+label[for="num1"] {
+  top: 10px;
+}
+label[for="num2"] {
+  top: 45px;
+}
+
+input {
+  margin: 5px;
+  width: 100%;
+  height: 25px;
+  background: transparent;
+  caret-color: rgb(216, 21, 200);
+  outline: 0;
+  border: none;
+  border-bottom: 3px solid #fff;
+  border-image: linear-gradient(275deg, rgba(0, 216, 247, 0) 0%, #ffffff 100%) 2 2 2 2;
+}
+
+button {
+  margin: 5px;
+  width: 70px;
+  height: 23px;
+  outline: 0;
+  border-radius: 35px;
+  border: none;
+  font: normal bolder 12px "";
+  opacity: 0.85;
+  transition: all 0.12s ease;
+  background-image: linear-gradient(to bottom, #f1939c, #a35c8f56);
+  box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.85);
+}
+
+.tips {
+  color: transparent;
+  background-image: linear-gradient(0.25turn, rgba(240, 94, 7, 1) 4%, rgba(30, 189, 177, 1) 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font: normal bolder 8rem "PingFang SC";
+  animation: tip 1500ms ease-in forwards;
+}
+
+@keyframes tip {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

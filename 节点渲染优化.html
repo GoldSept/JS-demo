@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 渲染200行50列按钮,点击时并打印几行几列
+      console.time('test');
+      let f = document.createDocumentFragment();
+      for (let i = 1; i <= 2000; i++) {
+        for (let j = 1; j <= 50; j++) {
+          const button = document.createElement('button');
+          button.setAttribute('data-info', `第${i}行第${j}列`);
+          button.innerText = 'click me';
+          f.appendChild(button);
+        }
+        if (i % 1000 === 0) {
+          document.body.appendChild(f);
+          f = document.createDocumentFragment();
+        }
+      }
+
+      document.body.addEventListener('click', e => {
+        const target = e.target;
+        if (target.nodeName === 'BUTTON') {
+          alert(target.dataset.info);
+        }
+      });
+      console.timeEnd('test');
+
+      // plan B
+      let count = 0;
+      function into() {
+        const anima = requestAnimationFrame(into);
+        if (count >= 55) cancelAnimationFrame(anima);
+        count++;
+        const div = document.createElement('div');
+        for (let i = 0; i <= 80; i++) {
+          const button = `<button>click me</button>`;
+          div.innerHTML += button;
+        }
+        document.body.appendChild(div);
+      }
+      into();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+caption {
+  font: normal bolder 1.3rem "PingFang SC";
+}
+
+thead {
+  background-color: #ccc;
+  font: normal bold 1.1rem "JetBrains Mono";
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: aqua;
+}
+tbody > tr:nth-child(even) {
+  background-color: yellow;
+}
+
+input {
+  margin: 10px;
+  width: 120px;
+  color: rgb(0, 60, 255);
+  border: none;
+  border-bottom: 1px solid #000;
+}
+input:focus {
+  outline: none;
+}
+a {
+  color: black;
+  font: normal bold 1.2rem "PingFang SC";
+  text-decoration: none;
+}

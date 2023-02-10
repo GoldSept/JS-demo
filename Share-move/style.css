@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#shareBox {
+  position: relative;
+  left: 0;
+  top: 150px;
+  width: 160px;
+  height: 300px;
+  display: flex;
+  /* border: 1px solid; */
+}
+
+#shareBox__text {
+  height: 80px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 10px;
+  background-color: rgb(238, 238, 169);
+  writing-mode: vertical-rl;
+  user-select: none;
+}
+
+#shareBox__text:hover {
+  cursor: default;
+}
+
+#shareBox__list {
+  position: absolute;
+  left: -128px;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #eee;
+}
+
+.shareBox--mode {
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  list-style: none;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.shareBox--mode:hover {
+  cursor: pointer;
+}

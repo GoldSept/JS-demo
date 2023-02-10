@@ -1,0 +1,7 @@
+.rect {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  transform-origin: left top;
+  background: #b60000;
+}

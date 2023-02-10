@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div {
+  width: 70px;
+  height: 70px;
+  background-color: #ccc;
+  position: relative;
+}

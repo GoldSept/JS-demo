@@ -1,0 +1,38 @@
+.guessBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px;
+  height: 160px;
+  border: 1px dotted;
+}
+
+.message-red {
+  height: 50px;
+  background-color: red;
+  color: white;
+  font: bold;
+}   
+
+.message-green {
+  height: 50px;
+  background-color: green;
+  color: white;
+  font: bold;
+}
+
+.btn--unselect {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#mesBox {
+  display: none;
+}
+
+span {
+  box-sizing: border-box;
+  margin: 5px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>轮播，是一种享受</h1>
+    <div class="banner-wrap">
+      <ul class="banner__list-box js-ban-list-box">
+        <li class="banner__item"><img src="images/bizarrerie.jpg" alt="" /></li>
+        <li class="banner__item"><img src="images/fire.jpg" alt="" /></li>
+        <li class="banner__item"><img src="images/skyline.jpg" alt="" /></li>
+        <li class="banner__item"><img src="images/sodaWater.jpg" alt="" /></li>
+        <li class="banner__item"><img src="images/wave.jpg" alt="" /></li>
+        <li class="banner__item"><img src="images/bizarrerie.jpg" alt="" /></li>
+      </ul>
+      <div class="active">
+        <div class="circle circle--on" data-index="0"></div>
+        <div class="circle" data-index="1"></div>
+        <div class="circle" data-index="2"></div>
+        <div class="circle" data-index="3"></div>
+        <div class="circle" data-index="4"></div>
+      </div>
+      <button class="prev js-prev">&lt;</button>
+      <button class="next js-next">&gt;</button>
+  </body>
+  <script src="script.js"></script>
+</html>
