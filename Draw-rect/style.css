@@ -1,7 +1,50 @@
-.rect {
-  width: 1px;
-  height: 1px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.button__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px;
+  width: 150px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.picker-btn {
+  background-color: transparent;
+  width: auto;
+  height: 100%;
+  border: none;
+  font-size: 20px;
+  transition: all 0.1s ease-out;
+}
+
+.picker-btn:active {
+  transform: scale(0.5);
+}
+
+.basic {
   position: absolute;
   transform-origin: left top;
-  background: #b60000;
+}
+
+.rect,
+.circle {
+  width: 1px;
+  height: 1px;
+  background: linear-gradient(112deg, rgba(249, 123, 92, 1) 5%, rgba(176, 77, 230, 1) 98%);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  transform-origin: center;
+  border: 1px solid transparent;
+  border-bottom-color: #b60000;
 }
