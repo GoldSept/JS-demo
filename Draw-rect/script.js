@@ -41,8 +41,6 @@
     element.style.top = `${y}px`;
   }
 
-  // buttonBox.addEventListener('mousedown', e => e.preventDefault());
-
   buttonBox.addEventListener('click', e => {
     const target = e.target;
     console.log(target.nodeName);
