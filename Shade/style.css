@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.image-container {
+  width: 800px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.image-container > img {
+  filter: brightness(0.2);
+}
+
+.mark {
+  position: absolute;
+  inset: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255， 0.85),
+    rgba(255, 255, 255， 0.75)
+  );
+  box-shadow: 0 0 20px 15px rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.default {
+  transform: translate(-50%, -50%);
+  transition: all 0.53s ease-out;
+}
