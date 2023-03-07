@@ -22,26 +22,6 @@ body {
   /* opacity: 0.5; */
 }
 
-/* .image-container::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: var(--box-width);
-  height: var(--box-height);
-  background: url('https://picsum.photos/id/237/1000/800');
-  clip-path: ellipse(150px 150px at center);
-  opacity: 0.5;
-  animation: warp 3s infinite ease-in forwards alternate;
-}
-
-@keyframes warp {
-  to {
-    transform: rotate(0.25turn);
-  }
-} */
-
 .wave-container {
   position: absolute;
   pointer-events: none;
@@ -55,30 +35,24 @@ body {
   background-image: url('https://picsum.photos/id/237/1000/800');
   background-repeat: no-repeat;
   background-size: 1000px 800px;
-  animation-timeline: ease-out;
+  animation-timing-function: ease-out;
 }
 .wave0 {
-  /* background-size: 1000px 106%; */
   animation: wave 0.32s forwards;
 }
 .wave1 {
-  /* background-size: 1000px 102%; */
   animation: wave 0.32s 0.2s forwards;
 }
 .wave2 {
-  /* background-size: 1000px 104%; */
-  animation: wave 0.32s 0.4s forwards;
+  animation: wave 0.32s 0.3s forwards;
 }
 .wave3 {
-  /* background-size: 1000px 101%; */
   animation: wave 0.32s 0.5s forwards;
 }
 .wave4 {
-  /* background-size: 1000px 102%; */
   animation: wave 0.32s 0.8s forwards;
 }
 .wave5 {
-  /* background-size: 1000px 100%; */
   animation: wave 0.32s 1s forwards;
 }
 
@@ -112,14 +86,13 @@ body {
     rgba(255, 255, 255， 0.45)
   );
   filter: blur(40px);
-  /* box-shadow: 0 0 var(--box-width) var(--box-width) rgba(0, 0, 0, 0.78); */
+  box-shadow: 0 0 var(--box-width) var(--box-width) rgba(0, 0, 0, 0.78);
   border-radius: 50%;
   z-index: 10;
   pointer-events: none;
 }
 
 .defocus {
-  opacity: 0;
   transform: translate(-50%, -50%);
   transition: all 0.95s ease-out;
 }
