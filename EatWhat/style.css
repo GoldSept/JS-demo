@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --level-top: 50;
+  --background-size: 300px;
+  /* 海蓝 */
+  /* --theme-color: #15cbf7; */
+  /* 法拉利 */
+  /* --theme-color: #b60000; */
+  /* 泡泡糖 */
+  /* --theme-color: #ff87d7; */
+  /* 无极 */
+  --theme-color: #000;
+  /* 爱马仕 */
+  /* --theme-color: #ff770f; */
+}
+
+.foods-container {
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--background-size);
+  height: var(--background-size);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-reflect: below 2px linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+}
+
+.wave > .textWrap {
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  font: normal normal 35px '得意黑';
+  color: #fff;
+  mix-blend-mode: difference;
+  z-index: var(--level-top);
+  user-select: none;
+}
+
+.wave {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--theme-color);
+  box-shadow: inset 10px -8px 32px rgba(255, 255, 255, 0.8);
+}
+
+.wave::after,
+.wave::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--background-size) / -2);
+  top: -153%;
+  z-index: 10;
+  width: calc(var(--background-size) * 2);
+  height: calc(var(--background-size) * 2);
+  background-color: #fff;
+  opacity: 0.4;
+  border-radius: 42%;
+  animation: spin 15s linear -0s infinite;
+}
+
+.wave::after {
+  z-index: 20;
+  opacity: 0.9;
+  border-radius: 45%;
+  animation: spin 30s linear -15s infinite;
+}
+
+.highlight1,
+.highlight2 {
+  position: absolute;
+  bottom: 97px;
+  left: 28px;
+  z-index: var(--level-top);
+  width: 13px;
+  height: 15px;
+  transform: rotate(324deg);
+  border-radius: 40%;
+  background: #fff;
+  filter: blur(3px);
+}
+
+.highlight2 {
+  bottom: 42px;
+  left: 52px;
+  width: 16px;
+  height: 45px;
+  transform: rotate(319deg);
+}
+
+/* 浪迹 */
+@keyframes spin {
+  0% {
+    transform: translate(-0%, -0%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-1%, -1%) rotate(90deg) scale(1);
+  }
+  50% {
+    transform: translate(-0%, -2%) rotate(180deg) scale(1);
+  }
+  75% {
+    transform: translate(1%, -1%) rotate(270deg) scale(1);
+  }
+  100% {
+    transform: translate(-0%, -0%) rotate(360deg) scale(1);
+  }
+}
