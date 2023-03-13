@@ -7,8 +7,12 @@ const container = document.querySelector('.foods-container'),
   textWrap = container.querySelector('.textWrap');
 
 // 吃啥列表
-const foodsList = ['兰州拉面', '里手混沌', '味全', '螺蛳粉', '大饼粥铺', '常德津市牛肉粉', '沙县小吃'];
-const storeFoods = foodsList.map(food => ({ id: getPinyin(food), food }));
+const lunch = ['兰州拉面', '里手混沌', '味全', '螺蛳粉', '大饼粥铺', '常德津市牛肉粉', '沙县小吃'];
+const dinner = ['烧腊饭', '卤肉饭', '黄焖鸡', '螺蛳粉', '意面', '猪脚饭'];
+// 获取当前时间
+const haveEatingTime = new Date().getHours();
+const menu = foosList => foosList.map(food => ({ id: getPinyin(food), food }));
+const storeFoods = menu(haveEatingTime > 14 ? dinner : lunch);
 
 // 当前食物名称
 let currFood = void 0;
