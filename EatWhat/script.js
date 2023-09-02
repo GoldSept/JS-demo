@@ -67,9 +67,7 @@ function randomScroll() {
   return function () {
     if (controller) {
       stopScroll(scrollId);
-      foodStore()
-        .then(value => dialog(value))
-        .catch(reason => dialog(reason));
+      foodStore().then(dialog).catch(dialog);
       return (controller = false);
     }
     controller = !controller;

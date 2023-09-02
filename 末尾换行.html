@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text {
+        line-height: 20px;
+        width: 200px;
+        height: 42px;
+        border: 1px solid #000;
+        word-break: break-all;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text" id="text">
+      Lorem ipsum dolor sit amet consectetur ，adipisicing elit. Illum/ a expedita* ipsa corporis vitae recusandae,
+      officia praesentium nulla provident suscipit aliquam hic iusto tenetur rem quisquam ea ab voluptatibus voluptate!
+    </div>
+
+    <script>
+      const node = {
+        textNode: text,
+      };
+      // 获取文本信息
+      const textInnerText = node.textNode.innerText;
+
+      const textArr = textInnerText.split('');
+
+      const observerOptions = {
+        root: node.textNode,
+        rootMargin: '0px',
+        threshold: 1,
+      };
+
+      const preReplace = [];
+
+      const obCallback = entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            observer.unobserve(entry.target);
+            preReplace.push(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(obCallback, observerOptions);
+
+      const fragment = document.createDocumentFragment();
+
+      textArr.forEach(i => {
+        const span = document.createElement('span');
+        span.innerText = i;
+        fragment.appendChild(span);
+        observer.observe(span);
+      });
+      node.textNode.replaceChild(fragment, node.textNode.firstChild);
+
+      preReplace.filter(Boolean);
+
+      preReplace.forEach(char => {
+        // TODO：对结束数组进行处理
+      });
+    </script>
+  </body>
+</html>

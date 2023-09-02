@@ -10,7 +10,7 @@
   height: 300px;
   border-radius: 5px;
   background: rgba(209, 209, 209, 0.664);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 55px 30px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .plan {

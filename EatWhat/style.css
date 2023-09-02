@@ -13,9 +13,9 @@
   /* 泡泡糖 */
   /* --theme-color: #ff87d7; */
   /* 无极 */
-  --theme-color: #000;
+  /* --theme-color: #000; */
   /* 爱马仕 */
-  /* --theme-color: #ff770f; */
+  --theme-color: #ff770f;
 }
 
 .foods-container {
@@ -53,6 +53,7 @@
 
 .wave::after,
 .wave::before {
+  pointer-events: none;
   content: '';
   position: absolute;
   left: calc(var(--background-size) / -2);
