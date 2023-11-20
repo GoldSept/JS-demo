@@ -1,0 +1,56 @@
+.container {
+  margin: 5vh auto;
+  border: 1px solid #999;
+  width: 500px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 6px;
+  padding: 6px;
+  box-sizing: border-box;
+  grid-auto-flow: dense;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container > div {
+  background-color: bisque;
+  border-radius: 4px;
+  position: relative;
+  counter-increment: grid-item;
+  transform: scale(0);
+  animation: fied-in 0.5s ease-in-out forwards;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fied-in {
+  to {
+    transform: scale(1);
+  }
+}
+.container > div::after {
+  content: counter(grid-item);
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+  font-family: 'JetBrains Mono';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: rgb(51, 141, 237);
+  color: #fff;
+}
+
+.grid-box-item-1 {
+  grid-column-end: span 2;
+}
+.grid-box-item-2 {
+  grid-row-end: span 2;
+}
+.grid-box-item-3 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
